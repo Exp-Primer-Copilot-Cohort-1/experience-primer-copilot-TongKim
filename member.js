@@ -1,11 +1,15 @@
-function skillsmember() {
-    var member = document.getElementById("member");
-    var skills = document.getElementById("skills");
-    var about = document.getElementById("about");
-    var contact = document.getElementById("contact");
-
-    member.style.display = "block";
-    skills.style.display = "none";
-    about.style.display = "none";
-    contact.style.display = "none";
+function skillsMember() {
+  var member = document.getElementById('member');
+  var memberValue = member.value;
+  if (memberValue === 'founder') {
+    document.getElementById('skillsMember').innerHTML = 'Founder';
+  } else if (memberValue === 'developer') {
+    document.getElementById('skillsMember').innerHTML = 'Developer';
+  } else if (memberValue === 'designer') {
+    document.getElementById('skillsMember').innerHTML = 'Designer';
+  } else if (memberValue === 'manager') {
+    document.getElementById('skillsMember').innerHTML = 'Manager';
+  } else {
+    document.getElementById('skillsMember').innerHTML = 'Member';
+  }
 }
